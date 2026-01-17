@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and uses semantic versioning.
 
+## [2.0.2] - 2026-01-17
+### Fixed
+- Highlights are now sorted by book location (chapter and position) instead of creation date, ensuring they appear in reading order as shown on the Kobo device.
+
 ## [2.0.1] - 2026-01-17
 ### Fixed
 - Highlights are now exported in chronological order (as they appear in the book) instead of reverse order.
@@ -30,6 +34,7 @@ The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.
 - Initial functionality: console grouping, optional Notion sync (`--notion-sync`).
 - Added early markdown export (experimental) prior to v2 flag rework.
 
+[2.0.2]: https://github.com/ozmodiar/kobo-highlights/releases/tag/v2.0.2
 [2.0.1]: https://github.com/ozmodiar/kobo-highlights/releases/tag/v2.0.1
 [2.0.0]: https://github.com/ozmodiar/kobo-highlights/releases/tag/v2.0.0
 [1.0.0]: https://github.com/ozmodiar/kobo-highlights/releases/tag/v1.0.0
