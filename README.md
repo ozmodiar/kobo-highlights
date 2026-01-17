@@ -16,8 +16,20 @@ Extract reading highlights from a Kobo eReader database. Output to different for
 Download the latest release for your platform from the GitHub Releases page and run it.
 
 ```bash
-# macOS / Linux example
-curl -L -o kobo-highlights https://github.com/ozmodiar/kobo-highlights/releases/latest/download/kobo-highlights
+# macOS ARM64 (Apple Silicon)
+curl -L -o kobo-highlights https://github.com/ozmodiar/kobo-highlights/releases/latest/download/kobo-highlights_darwin_arm64
+chmod +x kobo-highlights
+
+# macOS AMD64 (Intel)
+curl -L -o kobo-highlights https://github.com/ozmodiar/kobo-highlights/releases/latest/download/kobo-highlights_darwin_amd64
+chmod +x kobo-highlights
+
+# Linux ARM64
+curl -L -o kobo-highlights https://github.com/ozmodiar/kobo-highlights/releases/latest/download/kobo-highlights_linux_arm64
+chmod +x kobo-highlights
+
+# Linux AMD64
+curl -L -o kobo-highlights https://github.com/ozmodiar/kobo-highlights/releases/latest/download/kobo-highlights_linux_amd64
 chmod +x kobo-highlights
 
 # Optionally, copy the KoboReader database locally
