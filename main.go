@@ -161,7 +161,11 @@ func fetchBooks(dbPath string, limit int, debug bool) ([]formats.Book, error) {
 		FROM Bookmark b
 		JOIN content c ON c.ContentID = b.VolumeID
 		WHERE b.Text IS NOT NULL AND LENGTH(TRIM(b.Text)) > 0
-		ORDER BY c.Title ASC, b.DateCreated ASC`
+		ORDER BY c.Title ASC,
+		         b.ContentID ASC,
+		         CAST(SUBSTR(b.StartContainerPath, INSTR(b.StartContainerPath, '.')+1,
+		              INSTR(SUBSTR(b.StartContainerPath, INSTR(b.StartContainerPath, '.')+1), '.')-1) AS INTEGER) ASC,
+		         b.StartOffset ASC`
 
 	var rows *sql.Rows
 	if limit > 0 {
